@@ -8,7 +8,7 @@ const Filter = ({searchCountry, handleFilterChange}) => {
     <div>
       <form>
       <div>
-           <input
+          find countries <input
             value={searchCountry}
             onChange={handleFilterChange}
           />
@@ -119,7 +119,7 @@ const App = () => {
 
   }, []);
 
-  console.log('render', countries.length, weather.length, 'persons')
+  console.log('render', countries.length, 'countries')
 
 
   const handleChange = event => {
@@ -143,10 +143,10 @@ const App = () => {
 
   return (
     <div>
-        find exchange rates <Filter searchCountry={searchCountry} handleFilterChange={handleFilterChange} />
-        <Content countriesToShow={countriesToShow} />
+      <Filter searchCountry={searchCountry} handleFilterChange={handleFilterChange} />
+      <Content countriesToShow={countriesToShow} />
     </div>
-  );
-};
+  )
+}
 
 export default App;
