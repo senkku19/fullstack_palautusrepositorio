@@ -149,13 +149,19 @@ const App = () => {
         setPersons(persons.concat(returnedPersons));
         setNewName('');
         setNewNumber('');
+        setErrorMessage(`${newName} was added to the phonebook.`)
+        setColorOfNotification(1)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
       })
-
-      setErrorMessage(`${newName} was added to the phonebook.`)
-      setColorOfNotification(1)
-      setTimeout(() => {
-        setErrorMessage(null)
-      }, 5000)
+      .catch(error => {
+        setErrorMessage(`${error.response.data.error}`)
+        setColorOfNotification(2)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+      })
   }
   };
 
