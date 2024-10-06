@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haWphbSIsImlkIjoiNjZmZmM4ZTY3ZDk2Y2ZmNGFjMzY0NzljIiwiaWF0IjoxNzI4MjQzNTgwfQ.qPR36XjUmX23S9JHVmZtV3a5uWvv_3UHTgmwL8QUjes
 
 {
-    "title": "Keskiviikko",
+    "title": "Blogin luominen tokenilla testi",
     "author": "Maija",
     "url": "www.example.com",
-    "likes": 3
+    "likes": 3 
 }
